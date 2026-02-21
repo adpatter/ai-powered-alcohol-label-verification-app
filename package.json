@@ -1,0 +1,41 @@
+{
+  "name": "ai-powered-alcohol-label-verification-app",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/web",
+    "apps/api"
+  ],
+  "scripts": {
+    "format": "npm run format:api && npm run format:web",
+    "format:api": "npm run format --workspace=api",
+    "format:web": "npm run format --workspace=web",
+    "lint": "npm run lint:api && npm run lint:web",
+    "lint:api": "npm run lint --workspace=api",
+    "lint:web": "npm run lint --workspace=web",
+    "format:lint": "npm run format && npm run lint",
+    "build": "npm run build:api && npm run build:web",
+    "build:web": "npm run build --workspace=web",
+    "build:api": "npm run clean --workspace=api && npm run build --workspace=api",
+    "start": "npm run start --workspace=api",
+    "monitor:api": "nodemon --config nodemon.api.json",
+    "monitor:web": "nodemon --config nodemon.web.json",
+    "monitor": "nodemon ."
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adpatter/AI-Powered-Alcohol-Label-Verification-App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

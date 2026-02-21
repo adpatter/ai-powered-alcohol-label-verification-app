@@ -1,0 +1,11 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules"],
+  "verbose": true,
+  "watch": [".env", "./apps/api/src/**/*"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "ts,json,env",
+  "exec": "clear && npm run build:api && npm run start"
+}

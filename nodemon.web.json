@@ -1,0 +1,11 @@
+{
+  "restartable": "rs",
+  "ignore": [".git", "node_modules"],
+  "verbose": true,
+  "watch": [".env", "./apps/web/src/**/*", "./apps/web/scripts/**/*"],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "ts,js,json,env,html,css",
+  "exec": "clear && npm run build:web && npm run start"
+}

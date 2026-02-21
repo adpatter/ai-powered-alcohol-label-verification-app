@@ -1,0 +1,36 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "API",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "scripts": {
+    "lint": "npx eslint src/**/* eslint.config.js webpack.config.js scripts/**/*.js",
+    "format": "npx prettier --write .",
+    "build": "webpack --mode production --config webpack.config.js && node ./scripts/copy-static.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/far-analytics/typescript-full-stack-monorepo-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@stylistic/eslint-plugin": "^5.4.0",
+    "@types/node": "^20.19.33",
+    "eslint": "^9.37.0",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.5.0",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1",
+    "webpack": "^5.105.2",
+    "webpack-cli": "^6.0.1"
+  }
+}

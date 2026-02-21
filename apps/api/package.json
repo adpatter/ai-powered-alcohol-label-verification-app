@@ -1,0 +1,42 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API",
+  "main": "./dist/main.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "scripts": {
+    "clean": "rm -rf ./dist/*",
+    "build": "tsc --build .",
+    "lint": "npx eslint src/**/* eslint.config.js",
+    "format": "npx prettier --write .",
+    "watch": "tsc --watch",
+    "start": "node  --env-file=../../.env --expose-gc --trace-warnings ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/far-analytics/typescript-full-stack-monorepo-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.37.0",
+    "@stylistic/eslint-plugin": "^5.4.0",
+    "@types/node": "^20.19.33",
+    "eslint": "^9.37.0",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.5.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.1"
+  },
+  "dependencies": {
+    "openai": "^6.22.0"
+  }
+}

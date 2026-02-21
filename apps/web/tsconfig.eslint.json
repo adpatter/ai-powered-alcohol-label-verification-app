@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "allowJs": true,
+    "moduleResolution": "nodenext",
+    "module": "nodenext",
+    "noEmit": true,
+    "strict": true,
+    "types": ["@types/node"],
+    "checkJs": true
+  },
+  "include": ["eslint.config.js", "webpack.config.js", "scripts/copy-static.js"]
+}
